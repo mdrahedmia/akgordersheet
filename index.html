@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getValue()">
+  
+  <div id="parent">
+    
+   <div id="div1">
+     
+  <button type="submit" id="Calculate" onclick="getValue()">Calculate</button>
+  <h1 id="value">Value</h1>
+  
+  <div>
+  <p>Snacks Total</p>
+  <p id="totalbox">0</p><p>KG</p>
+  </div>
+  <div>
+    <p>Beverage Total</p>
+    <p id="totalbeveragebox">0</p><p>CTN</p>
+  </div>
+  <div>
+    <p>Candy Total</p>
+    <p id="totalcandybox">0</p><p>CTN</p>
+  </div>
+  </div>
+  <div id="table1">
+  <table border="1">
+    <tr style="height: 50px; font-size:15px;">
+      <th style="width:5%">SL No.</th>
+      <th>SKU Name</th>
+      <th style="width: 10%">Online Rate</th>
+      <th style="width: 10%">Quantity</th>
+      <th style="width: 15%">Rate</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>125ml Mango juice</td>
+      <td>401.76</td>
+      <td><input type="text" name="" id="mj125ml" value="0" onblur="autoSum()" class="auto"/></td>
+      <td id="ratemj125ml">0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>200ml mango juice</td>
+      <td>535.68</td>
+      <td><input type="text" name="" id="mj200ml" value="0" onblur="autoSum()" class="auto"/></td>
+      <td id="ratemj200ml">0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>250ml mango juice</td>
+      <td>669.9</td>
+      <td><input type="" name="" id="mj250ml" value="0" /></td>
+      <td id="ratemj250ml">0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>200ml PET Bottle</td>
+      <td>320.96</td>
+      <td><input type="" name="" value="0" id="mjpet200ml"/></td>
+      <td id="ratemjpet200ml">0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1000ml PET Bottle</td>
+      <td>624.96</td>
+      <td><input type="" name="" id="mjpet1000ml" value="0" /></td>
+      <td id="ratemjpet1000ml">0</td>
+    </tr>
+    
+    <tr>
+      <td>6</td>
+      <td>125ml Starship Chocolate Milk</td>
+      <td>781.20</td>
+      <td><input type="" name="" id="cm125ml" value="0" /></td>
+      <td id="ratecm125ml">0</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>200ml Starship Chocolate Milk</td>
+      <td>1071.36</td>
+      <td><input type="" name="" id="cm200ml" value="0" /></td>
+      <td id="ratecm200ml">0</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>150ml Shaad Lichi Drink</td>
+      <td>345.96</td>
+      <td><input type="" name="" id="ld150ml" value="0" /></td>
+      <td id="rateld150ml">0</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>150ml Shaad Orange Drink</td>
+      <td>345.96</td>
+      <td><input type="" name="" id="od150ml" value="0" /></td>
+      <td id="rateod150ml">0</td>
+    </tr>
+    
+    <tr style="font-weight: bold; height: 40px; font-size: 10px; background: lightcyan">
+      <td> </td>
+      <td>Total Beverage</td>
+      <td> </td>
+      <td id="totalbeverage">0</td>
+      <td id="totalbeveragevalue">0</td>
+    </tr>
+    
+    
+    <!-----snacks start here ----->
+    
+    
+    
+    
+    <tr>
+      <td>10</td>
+      <td>16g Kurmure Jhal Chanachur</td>
+      <td>915.12</td>
+      <td><input type="" name="" id="km16gjhal" value="0" /></td>
+      <td id="ratekm16gjhal">0</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>35g Kurmure Jhal Chanachur</td>
+      <td>767.25</td>
+      <td><input type="" name="" id="km35gjhal" value="0" /></td>
+      <td id="ratekm35gjhal">0</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>150g Kurmure Jhal Chanachur</td>
+      <td>1588.44</td>
+      <td><input type="" name="" id="km150gjhal" value="0" /></td>
+      <td id="ratekm150gjhal">0</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>300g Kurmure Jhal Chanachur</td>
+      <td>2418</td>
+      <td><input type="" name="" id="km300gjhal" value="0" /></td>
+      <td id="ratekm300gjhal">0</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>150g kurmure Classic Chanachur</td>
+      <td>1488</td>
+      <td><input type="" name="" id="km150gclassic" value="0" /></td>
+      <td id="ratekm150gclassic">0</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>300g kurmure Classic Chanachur</td>
+      <td>2269.20</td>
+      <td><input type="" name="" id="km300gclassic" value="0" /></td>
+      <td id="ratekm300gclassic">0</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>16g Kurmure Green peas</td>
+      <td>892.8</td>
+      <td><input type="" name="" id="km16ggp" value="0" /></td>
+      <td id="ratekm16ggp">0</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>35g Kurmure Dal Vaja</td>
+      <td>892.8</td>
+      <td><input type="" name="" id="km16gdal" value="0" /></td>
+      <td id="ratekm16gdal">0</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>15g Kurmure B.B.Q Chanachur</td>
+     <td>903.96</td>
+      <td><input type="" name="" id="km15gbbq" value="0" /></td>
+      <td id="ratekm15gbbq">0</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>30g Kurmure B.B.Q Chanachur</td>
+     <td>753.30</td>
+      <td><input type="" name="" id="km30gbbq" value="0" /></td>
+      <td id="ratekm30gbbq">0</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>150g Kurmure B.B.Q Chanachur</td>
+     <td>1666.56</td>
+      <td><input type="" name="" id="km150gbbq" value="0" /></td>
+      <td id="ratekm150gbbq">0</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>300g Kurmure B.B.Q Chanachur</td>
+     <td>2504.49</td>
+      <td><input type="" name="" id="km300gbbq" value="0" /></td>
+      <td id="ratekm300gbbq">0</td>
+    </tr>
+    <tr style="font-weight: bold; height: 40px; font-size: 10px; background: lightcyan">
+      <td> </td>
+      <td>Snacks Total/kg</td>
+      <td> </td>
+      <td id="snackstotalkg">0</td>
+      <td id="snackstotalvalue">0</td>
+    </tr>
+    
+    <!-----candy start here--->
+    <tr>
+      <td>22</td>
+      <td>200pcs Kids Candy </td>
+      <td>803.52</td>
+      <td><input type="" name="" id="kids200pcscandy" value="0" /></td>
+      <td id="ratekids200pcscandy">0</td>
+    </tr>
+    
+    <tr>
+      <td>23</td>
+      <td>150pcs Mango Masala </td>
+      <td>1255.5</td>
+      <td><input type="" name="" id="mm150pcscandy" value="0" /></td>
+      <td id="ratemm150pcscandy">0</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>150pcs Coffe Bite</td>
+      <td>1255.5</td>
+      <td><input type="" name="" id="cb150pcscandy" value="0" /></td>
+      <td id="ratecb150pcscandy">0</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>50pcs Kids Pouch Candy</td>
+      <td>714.24</td>
+      <td><input type="" name="" id="kp50pcscandy" value="0" /></td>
+      <td id="ratekp50pcscandy">0</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>50pcs Mango Masala Pouch</td>
+      <td>2176.20</td>
+      <td><input type="" name="" id="mm50pcscandy" value="0" /></td>
+      <td id="ratemm50pcscandy">0</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>50pcs Coffe bite Pouch</td>
+      <td>2176.20</td>
+      <td><input type="" name="" id="cb50pcscandy" value="0" /></td>
+      <td id="ratecb50pcscandy">0</td>
+    </tr>
+    
+    <tr style="font-weight: bold; height: 40px; font-size: 10px; background: lightcyan">
+      <td> </td>
+      <td>Candy Total</td>
+      <td></td>
+      <td id="candytotal">0</td>
+      <td id="candytotalvalue">0</td>
+    </tr>
+  </table>
+  
+  </div>
+  
+  </div>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>

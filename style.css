@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+input {
+  width: 100px;
+  height: 50px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+input:focus{
+  background: #CE1111D1;
+  color: white;
+  font-weight: bolder;
+}
+table{
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  text-align: center;
+  border: 1px solid black;
+  font-size: 10px;
+}
+
+#div1{
+  position: fixed;
+  width: 100%;
+  border: 2px solid black;
+  top: 0;
+  text-align: left;
+  background: cyan;
+}
+#div1 > button{
+  text-align: right;
+}
+#table1{
+  margin-top: 125px;
+}
+#div > div{
+  display: block;
+}
+#div1 > div > p{
+  padding: 5px;
+  display: inline;
+}
+button{
+  width: 80px;
+  height: 70px;
+  background: seagreen;
+  border: 2px solid red;
+  font-weight: bolder;
+  color: #fff;
+  position: fixed;
+  right: 0;
+}
